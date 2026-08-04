@@ -6,14 +6,10 @@ import styles from './CategoryCard.module.css'
 export default function CategoryCard({ category, index = 0 }) {
   const { products } = useData()
   const count = products.filter(p => p.categoryIds.includes(category.id)).length
-  const { ref, visible } = useScrollReveal()
+  const { ref } = useScrollReveal(index * 80)
 
   return (
-    <div
-      ref={ref}
-      className={`${styles.wrap} ${visible ? styles.visible : ''}`}
-      style={{ transitionDelay: `${index * 80}ms` }}
-    >
+    <div ref={ref}>
       <Link to={`/categoria/${category.slug}`} className={styles.card}>
         <div className={styles.iconWrap}>
           <span className={styles.icon}>{category.icon}</span>
