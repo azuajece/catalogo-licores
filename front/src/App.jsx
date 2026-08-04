@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AOS from 'aos'
 import { DataProvider } from './context/DataContext.jsx'
 import { AuthProvider } from './context/AuthContext.jsx'
 import AuthGuard from './components/AuthGuard/AuthGuard.jsx'
@@ -23,6 +25,10 @@ function PublicLayout({ children }) {
 }
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({ once: true, duration: 500, easing: 'ease-out' })
+  }, [])
+
   return (
     <BrowserRouter basename="/catalogo-licores">
       <AuthProvider>
