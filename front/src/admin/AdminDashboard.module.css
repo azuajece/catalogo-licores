@@ -1,0 +1,91 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.statCard {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.2s;
+}
+
+.statCard:hover {
+  border-color: var(--color-gold-dark);
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  font-size: 1.8rem;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-gold);
+}
+
+.statLabel {
+  color: var(--color-gray-dark);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.actions {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.actTitle {
+  color: var(--color-gold);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.note {
+  background: rgba(200, 169, 49, 0.05);
+  border: 1px solid var(--color-gold-dark);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+.note code {
+  background: #222;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  color: var(--color-gold);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 900px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

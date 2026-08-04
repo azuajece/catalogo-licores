@@ -1,0 +1,33 @@
+.footer {
+  background: #0a0a0a;
+  border-top: 2px solid var(--color-gold-dark);
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+}
+
+.inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.title {
+  color: var(--color-gold);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.warning {
+  color: var(--color-gray);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.disclaimer {
+  color: var(--color-gray-dark);
+  font-size: 0.72rem;
+}

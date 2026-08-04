@@ -1,0 +1,256 @@
+:root {
+  --color-bg: #111111;
+  --color-bg-card: #1e1e1e;
+  --color-gold: #C8A931;
+  --color-gold-light: #e5c84a;
+  --color-gold-dark: #9a7d1e;
+  --color-white: #ffffff;
+  --color-gray: #cccccc;
+  --color-gray-dark: #888888;
+  --color-danger: #e74c3c;
+  --color-success: #27ae60;
+  --radius: 10px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-gold);
+  color: #111;
+}
+
+.btn-primary:hover {
+  background: var(--color-gold-light);
+}
+
+.btn-danger {
+  background: var(--color-danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+.btn-secondary {
+  background: #333;
+  color: var(--color-white);
+  border: 1px solid #555;
+}
+
+.btn-secondary:hover {
+  background: #444;
+}
+
+.btn-sm {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.badge-price {
+  background: var(--color-gold);
+  color: #111;
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.badge-no-price {
+  background: #555;
+  color: #ccc;
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-bottom: 0.3rem;
+}
+
+.page-subtitle {
+  color: var(--color-gray-dark);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: var(--color-white);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-group select option {
+  background: #222;
+}
+
+.alert {
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.alert-success {
+  background: rgba(39, 174, 96, 0.15);
+  border: 1px solid var(--color-success);
+  color: #5dca84;
+}
+
+.alert-error {
+  background: rgba(231, 76, 60, 0.15);
+  border: 1px solid var(--color-danger);
+  color: #f1948a;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  background: #222;
+  color: var(--color-gold);
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-gold-dark);
+}
+
+td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #2a2a2a;
+  color: var(--color-gray);
+  vertical-align: middle;
+}
+
+tr:hover td {
+  background: #1a1a1a;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal h2 {
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+}
