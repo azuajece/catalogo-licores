@@ -22,8 +22,8 @@ export default function Home() {
         <section>
           <h2 className={styles.sectionTitle}>Categorías</h2>
           <div className={styles.grid}>
-            {categories.map(cat => (
-              <CategoryCard key={cat.id} category={cat} />
+            {categories.map((cat, i) => (
+              <CategoryCard key={cat.id} category={cat} index={i} />
             ))}
           </div>
         </section>
